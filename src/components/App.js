@@ -27,6 +27,16 @@ class App extends React.Component {
   }
 
   render() {
+    if (!this.state.selectedVideo) {
+      return (
+        <div className='ui container' style={{marginTop: '10px'}}>
+          <SearchBar onSubmit={this.onSearchSubmit} />
+            <div className="ui active inverted dimmer">
+              <div className="ui text loader">Loading</div>
+            </div>
+        </div>
+      );
+    }
     return (
       <div className='ui container' style={{marginTop: '10px'}}>
         <SearchBar onSubmit={this.onSearchSubmit} />

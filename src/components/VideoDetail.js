@@ -1,9 +1,6 @@
 import React from 'react';
 
 const VideoDetail = ({ video }) => {
-  if (!video) {
-    return <div className='video-detail'>No selected video yet</div>;
-  }
 
   const url = `http://www.youtube.com/embed/${video.id.videoId}`;
 
@@ -13,6 +10,7 @@ const VideoDetail = ({ video }) => {
         <iframe
           title={video.snippet.title}
           src={url}
+          allowfullscreen="0"
         />
       </div>
       <div className='ui segment' >
