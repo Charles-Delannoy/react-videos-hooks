@@ -10,7 +10,7 @@ const VideoDetail = ({ video }) => {
         <iframe
           title={video.snippet.title}
           src={url}
-          allowfullscreen="0"
+          allowFullScreen="0"
         />
       </div>
       <div className='ui segment' >
